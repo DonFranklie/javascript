@@ -1,10 +1,30 @@
-// Variables
-// let and const
+// Data Types
 
-// With let- you can reassign values, with const you can't
+// String, Numbers, Boolean, null, undefined
 
-let age = 30;
+// const name  = 'John';
+// const age  = 30;
+// const rating = 4.5;
+// const isCool = true;
 
-// age = 40;
+// const x = null;
+// const y = undefined;
 
-// Const is used when only assigning values that are not going to be changed in the future
+// console.log(typeof )
+
+// Concatenation
+//const name  = 'John';
+//const age  = 30;
+
+// Template Strings
+//const hello = `My name is ${name} and I am ${age}`;
+//console.log(hello);
+
+// METHODS 
+
+const name = 'Franklin Makokha';
+
+console.log(name.length);
+console.log(name.toUpperCase());
+console.log(name.toLowerCase());
+console.log(name.substring(0,5).toUpperCase());
