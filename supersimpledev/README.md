@@ -1,3 +1,3 @@
 # LEARNING JAVASCRIPT
-## ARRAYS
+## LOOPS
 Arrays adds a list of values
