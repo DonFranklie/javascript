@@ -1,30 +1,18 @@
-// Data Types
+// Arrays
+/* Are variables that hold multiple values*/
 
-// String, Numbers, Boolean, null, undefined
+//Not used most often
+/*const numbers = new Array(1,2,3,4,5);
+console.log(numbers);
+*/
 
-// const name  = 'John';
-// const age  = 30;
-// const rating = 4.5;
-// const isCool = true;
+const fruits = ['apples', 'oranges','mangoes','pineapples'] //You can put different types of data in a single array
 
-// const x = null;
-// const y = undefined;
+fruits.push('grapes') // adds array value at the end of the array
+fruits.unshift('strawberries') // adds array value at the start of the array
+// fruits.pop()// removes array value at the end of the array
+console.log(fruits);
 
-// console.log(typeof )
+console.log(fruits.indexOf('oranges'));
 
-// Concatenation
-//const name  = 'John';
-//const age  = 30;
-
-// Template Strings
-//const hello = `My name is ${name} and I am ${age}`;
-//console.log(hello);
-
-// METHODS 
-
-const name = 'Franklin Makokha';
-
-console.log(name.length);
-console.log(name.toUpperCase());
-console.log(name.toLowerCase());
-console.log(name.substring(0,5).toUpperCase());
+console.log(Array.isArray('hello')); //To check if something is an array
