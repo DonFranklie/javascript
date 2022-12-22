@@ -1,12 +1,14 @@
-const name = 'Franklin, Makokha, Wafula';
+// Arrays
 
-console.log(name.length) // LEngth is a property so it does not need parentheses
+const carComp = ['toyota', 'tesla', 'mazda', 'ford'];
+console.log(carComp);
 
-console.log(name.toUpperCase()) // toUpperCase is a method so it  needs parentheses
+carComp.pop(); //pop removes the last entry in the array
+carComp.push('mclaren'); // push() adds a new entry to the array
+carComp.unshift('Range Rover');
+console.log(carComp);
 
-const isArr = name.split(','); // LEngth is a property so it does not need parentheses
+console.log(Array.isArray(carComp)); //Checking if it is an Array
 
-console.log(isArr)
-
-
+console.log(carComp.indexOf('toyota'));
 
