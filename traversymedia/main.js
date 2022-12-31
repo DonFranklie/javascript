@@ -1,14 +1,20 @@
-// Arrays
+//Object Literals
 
-const carComp = ['toyota', 'tesla', 'mazda', 'ford'];
-console.log(carComp);
+const person = {
+    firstName: 'Franklin',
+    lastName: 'Makokha',
+    age: 21,
+    address:{
+        country: 'Kenya',
+        county: 'Nairobi'
+    },
+    hobbies: ['movies','music', 'coding']
+}
 
-carComp.pop(); //pop removes the last entry in the array
-carComp.push('mclaren'); // push() adds a new entry to the array
-carComp.unshift('Range Rover');
-console.log(carComp);
+console.log(person.address.country)
 
-console.log(Array.isArray(carComp)); //Checking if it is an Array
 
-console.log(carComp.indexOf('toyota'));
+person.email = 'donfranklie@gmail.com'
+
+console.log(person)
 
