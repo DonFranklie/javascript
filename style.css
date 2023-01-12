@@ -1,0 +1,75 @@
+                                /* CSS CODE */
+
+
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+}
+
+label{
+    position: relative;
+    top: -135px;
+    width: 162px;
+    height: 87px;
+    background-color: #212121;
+    border-radius: 15px;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 75px;
+    background-color: #333;
+    border: 6px solid #212121;
+    transition: all .35s ease;
+    cursor: pointer;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label input{
+    appearance: none;
+}
+
+label input:checked ~ span {
+    left: 75px;
+}
+
+ion-icon{
+    font-size: 2.5em; 
+    color: #fff; 
+}
+
+label input:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff); 
+}
+
+.image-container{
+    position: absolute;
+    top: 90px;
+    left: -90px;
+    background: url("bulb_off.jpg");
+    height: 370px;
+    width: 370px;
+    transition: all .5s ease;
+}
+
+
+label input:checked ~ .image-container{
+    background: url("bulb_on.jpg");
+}

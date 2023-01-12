@@ -1,78 +1,26 @@
+  <!-- HTML CODE -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franklin's To do List</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        *{
-            font-family: 'Barlow Semi Condensed', sans-serif;
-        }
-        button{
-            background-color: green;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: color .5s ;
-        }
-
-        button:hover{
-            color: rgb(0, 0, 0);
-        }
-
-        p{
-            width: 300px;
-            display: none;
-        }
-    </style>
+    <title>Franklin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
+
+
+   <label>  
+    <input type="checkbox">    
+    <span><ion-icon name="bulb-outline"></ion-icon></span>
+    <div class="image-container"></div>
+   </label>
 
 
 
-
-    <script>
-        function turnOnOff() {
-            var image=document.getElementById('Image');
-            if(image.src.match("ONbulb"))
-                image.src=
-    "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
-            else
-                image.src=
-    "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
-        }
-    </script>
-     
-        <img id="Image"
-              onclick="turnOnOff()"
-              src=
-    "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
-     
-    <p>
-        Click on the bulb to turn it ON and OFF
-    </p>
-    <!-- <button onclick="showParagraph()">DISPLAY PARAGRAPH</button>
-
-    <div></div>
-
-    <p class="the-paragraph">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita ad et nesciunt laboriosam dolores cumque.
-    </p>
-
-    <script>
-        const zeParagraph = document.querySelector(".the-paragraph");
-
-        function showParagraph(){
-            zeParagraph.style.display = "block";
-        }
-    </script> -->
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
