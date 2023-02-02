@@ -6,21 +6,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franklin</title>
+    <title>Javascript</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h1>Tasks to Be Done Today</h1>
 
-
-   <label>  
-    <input type="checkbox">    
-    <span><ion-icon name="bulb-outline"></ion-icon></span>
-    <div class="image-container"></div>
-   </label>
+<!-- <input type="text" name="" id="todo-title">
+<button class="btn" id="todo-button" onclick="taskDone()">Add Task</button> -->
+<div id="counter">0</div>
+<button onclick="buttonCount()" id="button">UP</button>
+<button onclick="decreaseButton()" id="button-2">Down</button>
 
 
 
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+   <script>
+
+let countDisplay = document.getElementById('counter');
+let count = 0;
+
+function buttonCount(){
+count = count + 1;
+countDisplay.innerText = count;
+document.appendChild(countDisplay);
+}
+
+function decreaseButton(){
+count = count - 1;
+countDisplay.innerText = count;
+document.appendChild(countDisplay);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let todos = ['Read', 'Exercise', 'Sleep', 'Shower'];
+
+    // function addTodo(){
+    //   let textBox = document.getElementById('todo-title');
+    //   let title = textBox.value;
+    //   todos.push(title);
+    // }
+
+    // todos.forEach(function(todoTitle){
+    //   let element = document.createElement('div');
+    //   element.innerText = todoTitle.toUpperCase();
+    //   document.body.appendChild(element);
+    // });
+
+    
+
+  
+   </script>
 </body>
 </html>
