@@ -12,11 +12,9 @@
 <body>
 <h1>Tasks to Be Done Today</h1>
 
-<!-- <input type="text" name="" id="todo-title">
-<button class="btn" id="todo-button" onclick="taskDone()">Add Task</button> -->
-<div id="counter">0</div>
-<button onclick="buttonCount()" id="button">UP</button>
-<button onclick="decreaseButton()" id="button-2">Down</button>
+<input type="text" name="" id="todo-title">
+<button class="btn" id="todo-button" onclick="addTask()">Add Task</button>
+
 
 
 
@@ -25,48 +23,20 @@
 
    <script>
 
-let countDisplay = document.getElementById('counter');
-let count = 0;
+    let todos = ['Read', 'Exercise', 'Sleep', 'Shower'];
 
-function buttonCount(){
-count = count + 1;
-countDisplay.innerText = count;
-document.appendChild(countDisplay);
-}
+    function addTodo(){
+      let textBox = document.getElementById('todo-title');
+      let title = textBox.value;
+      todos.push(title);
+      
+    }
 
-function decreaseButton(){
-count = count - 1;
-countDisplay.innerText = count;
-document.appendChild(countDisplay);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // let todos = ['Read', 'Exercise', 'Sleep', 'Shower'];
-
-    // function addTodo(){
-    //   let textBox = document.getElementById('todo-title');
-    //   let title = textBox.value;
-    //   todos.push(title);
-    // }
-
-    // todos.forEach(function(todoTitle){
-    //   let element = document.createElement('div');
-    //   element.innerText = todoTitle.toUpperCase();
-    //   document.body.appendChild(element);
-    // });
+    todos.forEach(function(todoTitle){
+      let element = document.createElement('div');
+      element.innerText = todoTitle.toUpperCase();
+      document.body.appendChild(element);
+    });
 
     
 
