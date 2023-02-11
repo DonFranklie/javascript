@@ -13,8 +13,9 @@
 <h1>Tasks to Be Done Today</h1>
 
 <input type="text" name="" id="todo-title">
-<button class="btn" id="todo-button" onclick="addTask()">Add Task</button>
+<button class="btn" id="todo-button" onclick="addTodo()">Add Task</button>
 
+<div id="todo-list"></div>
 
 
 
@@ -25,18 +26,28 @@
 
     let todos = ['Read', 'Exercise', 'Sleep', 'Shower'];
 
+    render();
+
     function addTodo(){
       let textBox = document.getElementById('todo-title');
       let title = textBox.value;
       todos.push(title);
-      
+    
+    render();
     }
+
+    function render(){
+      // Resetting Our List
+      const todoList = document.getElementById('todo-list');
+      todoList.innerText = ''; 
 
     todos.forEach(function(todoTitle){
       let element = document.createElement('div');
       element.innerText = todoTitle.toUpperCase();
-      document.body.appendChild(element);
+      todoList.appendChild(element);
     });
+    }
+
 
     
 
