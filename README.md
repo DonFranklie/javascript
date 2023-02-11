@@ -1,3 +1,3 @@
 # LEARNING JAVASCRIPT
-
-![Alt text](bulb.gif)
+## Simple Add-To-Cart 
+![Alt text](page-screenshot.jpg)
