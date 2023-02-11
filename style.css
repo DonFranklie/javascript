@@ -17,10 +17,30 @@ button{
   font-weight: 500;
   font-size: 18px;
   margin: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
 }
 
 input{
   padding: 3px 10px;
   font-size: 18px;
 
+}
+
+#clear-btn{
+  padding: 5px 30px;
+  font-size: 19px;
+  font-weight: 600;
+  transition: all .35s ease;
+}
+
+#clear-btn:hover{
+  color: #fff;
+  background-color: rgb(235, 77, 77);
+
+}
+
+#cart{
+  transition: all .35s ease;
 }

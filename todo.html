@@ -10,47 +10,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Tasks to Be Done Today</h1>
 
-<input type="text" name="" id="todo-title">
-<button class="btn" id="todo-button" onclick="addTodo()">Add Task</button>
+  <div id="cart"></div>
+  
+  
+  <button id="item" onclick="addToList('Apple')">Apple</button>
+  <button id="item" onclick="addToList('Tomato')">Tomato</button>
+  <button id="item" onclick="addToList('Eggs')">Eggs</button>
 
-<div id="todo-list"></div>
-
+  <button id="clear-btn" onclick="clearList()">Clear</button>
 
 
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
    <script>
+      const cartList = document.getElementById('cart');
 
-    let todos = ['Read', 'Exercise', 'Sleep', 'Shower'];
+    function addToList(food){
+      const itemButton = document.getElementById('item');
+      // const foodItem = food;
 
-    render();
-
-    function addTodo(){
-      let textBox = document.getElementById('todo-title');
-      let title = textBox.value;
-      todos.push(title);
-    
-    render();
+      const foodItem = document.createElement('div');
+      foodItem.innerText = food;
+      cartList.appendChild(foodItem);
+      
     }
 
-    function render(){
-      // Resetting Our List
-      const todoList = document.getElementById('todo-list');
-      todoList.innerText = ''; 
-
-    todos.forEach(function(todoTitle){
-      let element = document.createElement('div');
-      element.innerText = todoTitle.toUpperCase();
-      todoList.appendChild(element);
-    });
+    function clearList(){
+      const clearButton = document.getElementById('clear-btn');
+      cartList.innerText = '';
     }
-
-
-    
-
+  
   
    </script>
 </body>
