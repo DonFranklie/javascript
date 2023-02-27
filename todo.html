@@ -10,38 +10,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Tasks To Be Done Today</h1>
+  <input type="text" id="todo-title">
+  <input type="date" name="" id="date-picker">
+  <button onclick="addTodo()">Add Todo</button>
 
-  <div id="cart"></div>
-  
-  
-  <button id="item" onclick="addToList('Apple')">Apple</button>
-  <button id="item" onclick="addToList('Tomato')">Tomato</button>
-  <button id="item" onclick="addToList('Eggs')">Eggs</button>
-
-  <button id="clear-btn" onclick="clearList()">Clear</button>
-
+  <div id="todo-list"></div>
 
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
    <script>
-      const cartList = document.getElementById('cart');
-
-    function addToList(food){
-      const itemButton = document.getElementById('item');
-      // const foodItem = food;
-
-      const foodItem = document.createElement('div');
-      foodItem.innerText = food;
-      cartList.appendChild(foodItem);
       
-    }
+      const todos = [{
+      
+        title:'Get Groceries',
+        dueDate:'2021-10-04'
+      }, 
+      
+      {
+        title:'Wash Car',
+       dueDate: '2021-10-04'
+      },
 
-    function clearList(){
-      const clearButton = document.getElementById('clear-btn');
-      cartList.innerText = '';
-    }
-  
+       {
+        title:'Make Dinner',
+        dueDate:'2021-10-04'}
+      ];
+
+      render();
+
+      function addTodo() {
+        const textbox = document.getElementById('todo-title');
+        const title = textbox.value;
+
+        const datePicker = document.getElementById('date-picker');
+        const dueDate = datePicker.value;
+        todos.push(
+          {
+            title: title,
+            dueDate: dueDate,
+          }
+        );
+
+        render();
+        
+      };
+
+
+      function render(){
+        document.getElementById('todo-list').innerHTML = '';
+
+        todos.forEach(function (todo){
+          const element = document.createElement('div');
+          element.innerText = todo.title +' '+ todo.dueDate;
+          const todoList = document.getElementById('todo-list');
+          todoList.appendChild(element);
+
+          });
+      }
   
    </script>
 </body>
