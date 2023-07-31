@@ -19,3 +19,22 @@ let result = firstArgument == secondArgument;
 
 // When Comparing different data types, they are all converted to numbers.
 // alert("2">"12"); //Outputs true
+
+// Tests
+// Beginner Level:
+
+// What are the six comparison operators in JavaScript?
+// >, <, >=, <=, ==, !=, === 
+// How do comparison operators work, and what do they return?
+    // They compare the values given and they return a boolean value, either true or false
+// Intermediate Level:
+
+// What is the difference between the strict equality operator (===) and the abstract equality operator (==)?
+    // The abstract equality operator coverts the values to numbers while the strict equality operator compares the values without type conversion.
+// How do comparison operators handle non-primitive data types, such as objects and arrays?
+    //
+// Advanced Level:
+
+// Can you explain truthy and falsy values in JavaScript, and how they are relevant to comparison operators?
+
+// What are short-circuit evaluation and how is it used in conjunction with comparison operators?
