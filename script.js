@@ -1,33 +1,44 @@
-//Conditional Branching
-// The use of if(...) statement and ? the ternary operator
+// LOGICAL OPERATORS
+// They include OR(||), AND(&&), NOT(!) and Null coalescing(??)
 
-// let year = prompt("Which year was ECMA Script 6 released?", '');
+// The OR operator
+//`This one Mostly operates with boolean values, if a value is not boolean, it converts it to boolean then evaluates it.`
+//`It evaluates from left to right`
+//`Always picks the first truthy value, if no truthy value it reports false`
 
-// let message = (year>2015) ? "Way after" :
-// (year==2015) ? "Bingo":
-// "Wrong";
+// alert(true||true);
+// alert(true||false)
+// alert(false||true)
+// alert(false||false) //Outputs false
 
-// alert(message);
+// let hour = 29;
+// let isWeekend = true;
 
-// Using if else statement is better for readability though using the ternary operator is shorter and simpler.
+// if(hour<10||hour>18||isWeekend){
+//     alert("Office closed");
+// }
 
-let companyName = prompt("What is the name of the company the created JavaScript?", "");
+// let result = value1 || value2 || value3;
+// The OR operator evaluates the operands from left to right.
+//If all the operands are evaluted, all are falsy, the last value is returned in its original form.
 
-if(companyName == "netscape"){
-    alert("Correct answer");
+// alert(null || undefined || 0);
+//Short circuit evaluation
+// true || alert("not printed");
+// false || alert("printed"); // This is the only alue printed.
+// let x = 1;
+// (x > 0) && alert( 'Greater than zero!' );
 
-}else if(companyName == "NetScape"){
-    alert("Correct answer");
+// The !NOT operator
+// It basically negates a value and returns the boolean
 
-}else if(companyName == "netScape"){
-    alert("Correct answer");
+// alert(!!"Wafula");
+// If we use !! it says we negate then the second ! reverses your negation
 
-}else if(companyName == "Netscape"){
-    alert("Correct answer");
+// let age = 12;
 
-}else if(companyName == ""){
-    alert("Answer the damn question");
-    
-}else{
-    alert("Not exactly");
-}
+// if (age)
+
+if (-1 || 0) alert( 'first' );
+if (-1 && 0) alert( 'second' );
+if (null || -1 && 1) alert( 'third' );
