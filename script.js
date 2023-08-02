@@ -11,10 +11,23 @@
 
 // Using if else statement is better for readability though using the ternary operator is shorter and simpler.
 
-let companyName = prompt("What is the name of the company the created JavaScript?", '');
+let companyName = prompt("What is the name of the company the created JavaScript?", "");
 
 if(companyName == "netscape"){
-    alert("Correct answer")
+    alert("Correct answer");
+
+}else if(companyName == "NetScape"){
+    alert("Correct answer");
+
+}else if(companyName == "netScape"){
+    alert("Correct answer");
+
+}else if(companyName == "Netscape"){
+    alert("Correct answer");
+
+}else if(companyName == ""){
+    alert("Answer the damn question");
+    
 }else{
     alert("Not exactly");
 }
