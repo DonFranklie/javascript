@@ -1,44 +1,34 @@
-// LOGICAL OPERATORS
-// They include OR(||), AND(&&), NOT(!) and Null coalescing(??)
+// Null Coalescing
+// This is new in JavaScript. You can't use it on old browsers, you need to use polyfills.
 
-// The OR operator
-//`This one Mostly operates with boolean values, if a value is not boolean, it converts it to boolean then evaluates it.`
-//`It evaluates from left to right`
-//`Always picks the first truthy value, if no truthy value it reports false`
+let height;
+let width;
+ 
+let area = (height??100)*(width??20);
 
-// alert(true||true);
-// alert(true||false)
-// alert(false||true)
-// alert(false||false) //Outputs false
+// alert(area);
 
-// let hour = 29;
-// let isWeekend = true;
 
-// if(hour<10||hour>18||isWeekend){
-//     alert("Office closed");
-// }
+// We can use ?? the same as || but the problem is that OR operator returns the first truthy value and the ?? operator returns the first defined value.
+// The problem with using || is when we really just wanna get the value of a variable, even if it's zero. As we all know, || reads 0 as a falsy value
+// So it will automatically passover 0 as a value. The following example describes what I have just said best;
 
-// let result = value1 || value2 || value3;
-// The OR operator evaluates the operands from left to right.
-//If all the operands are evaluted, all are falsy, the last value is returned in its original form.
+let weight = 0;
 
-// alert(null || undefined || 0);
-//Short circuit evaluation
-// true || alert("not printed");
-// false || alert("printed"); // This is the only alue printed.
-// let x = 1;
-// (x > 0) && alert( 'Greater than zero!' );
+alert(weight || 100); // Outputs 100
+alert(weight ?? 100); // Outputs 0
 
-// The !NOT operator
-// It basically negates a value and returns the boolean
+// See the difference now.
 
-// alert(!!"Wafula");
-// If we use !! it says we negate then the second ! reverses your negation
+// In summary, ?? operator gives us the original value, it does not matter the boolean definition of it.
+// It simply checks the definition of a variable.
 
-// let age = 12;
+// I would say that in real life projects, we can use it when, a user has just got on our site,
+// He most likely has not registered so I would write a like the following;
 
-// if (age)
+let firstName = null;
+let secondName = null;
+let nickName = null;
 
-if (-1 || 0) alert( 'first' );
-if (-1 && 0) alert( 'second' );
-if (null || -1 && 1) alert( 'third' );
+alert(firstName??secondName??nickName??"Anonymous");
+
