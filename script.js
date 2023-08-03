@@ -1,12 +1,17 @@
 // Null Coalescing
 // This is new in JavaScript. You can't use it on old browsers, you need to use polyfills.
 
-let height;
-let width;
+let height = 0;
+let width = 0;
  
 let area = (height??100)*(width??20);
 
-// alert(area);
+alert(area);
+
+area = (height||100)*(width||20);
+
+alert(area);
+
 
 
 // We can use ?? the same as || but the problem is that OR operator returns the first truthy value and the ?? operator returns the first defined value.
@@ -15,8 +20,8 @@ let area = (height??100)*(width??20);
 
 let weight = 0;
 
-alert(weight || 100); // Outputs 100
-alert(weight ?? 100); // Outputs 0
+// alert(weight || 100); // Outputs 100
+// alert(weight ?? 100); // Outputs 0
 
 // See the difference now.
 
@@ -30,5 +35,5 @@ let firstName = null;
 let secondName = null;
 let nickName = null;
 
-alert(firstName??secondName??nickName??"Anonymous");
+// alert(firstName??secondName??nickName??"Anonymous");
 
