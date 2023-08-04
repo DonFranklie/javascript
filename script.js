@@ -1,39 +1,70 @@
-// Null Coalescing
-// This is new in JavaScript. You can't use it on old browsers, you need to use polyfills.
+// LOOPS: WHILE and FOR
 
-let height = 0;
-let width = 0;
- 
-let area = (height??100)*(width??20);
+// BREAKING THE LOOP
+// let sum = 0;
+// alert("After entering your decide number of operands press ok twice to get the sum");
+// labelName: while (true) {
+// let value = +prompt("Enter a number", '');
+// if (value % 2 == 0){
+//     alert("Don't use even numbers")
+//  break labelName} else{
+// sum += value;
+//  };// (*)
+// }
+// alert( 'Sum: ' + sum );
 
-alert(area);
+//CONTINUE TO NEXT ITERATION
+// for(i = 0; i<10; i++){
 
-area = (height||100)*(width||20);
+//     if(i%2 == 0) continue;
 
-alert(area);
+//     alert(i);
+// }
 
+// LABELS FOR BREAK/CONTINUE
+outer: for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+    let input = prompt(`Value at coords (${i},${j})`, '');
+    // what if we want to exit from here to Done (below)?
+    if (!input) break outer;
+    }
+    }
+    alert('Done!');
 
+// FOR LOOP
+// let i = 0;
 
-// We can use ?? the same as || but the problem is that OR operator returns the first truthy value and the ?? operator returns the first defined value.
-// The problem with using || is when we really just wanna get the value of a variable, even if it's zero. As we all know, || reads 0 as a falsy value
-// So it will automatically passover 0 as a value. The following example describes what I have just said best;
+// for (; i < 3; i++){
+//     alert(i);
+// }
+// alert("Out of the loop");
 
-let weight = 0;
+// alert(i);
 
-// alert(weight || 100); // Outputs 100
-// alert(weight ?? 100); // Outputs 0
+//WHILE LOOP
 
-// See the difference now.
+// let i = 0;
 
-// In summary, ?? operator gives us the original value, it does not matter the boolean definition of it.
-// It simply checks the definition of a variable.
+// while(i<3){
+//     alert(i);
+//     i++; // If omitted the loop would run (in theory) forever outputting zero
+// }
 
-// I would say that in real life projects, we can use it when, a user has just got on our site,
-// He most likely has not registered so I would write a like the following;
+// let i = 3;
 
-let firstName = null;
-let secondName = null;
-let nickName = null;
+// while(i){
+//     alert(i);
+//     i--; // If omitted the loop would run (in theory) forever outputting zero
+// }
 
-// alert(firstName??secondName??nickName??"Anonymous");
+// THE DO...WHILE LOOP
 
+// let i = 0;
+
+// do{
+//     alert(i);
+//     i++;
+// }while(i<3);
+
+// Instead of this loop we normally just resort to using the while loop,
+// do...while loop is useful when we want the loop body to run atleast once regardless of whether it's truthy or not.
