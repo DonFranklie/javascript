@@ -1,70 +1,23 @@
-// LOOPS: WHILE and FOR
+// The Switch Statement
+// It is essential when we want to avoid using multiple if checks
+// Here is an example;
 
-// BREAKING THE LOOP
-// let sum = 0;
-// alert("After entering your decide number of operands press ok twice to get the sum");
-// labelName: while (true) {
-// let value = +prompt("Enter a number", '');
-// if (value % 2 == 0){
-//     alert("Don't use even numbers")
-//  break labelName} else{
-// sum += value;
-//  };// (*)
-// }
-// alert( 'Sum: ' + sum );
+let arg = +prompt("Enter a number; ", '');
 
-//CONTINUE TO NEXT ITERATION
-// for(i = 0; i<10; i++){
+switch(arg){
+    case 1:
+        alert("One");
+        break;
 
-//     if(i%2 == 0) continue;
+    case 2:
+        alert("Two");
+        break;
 
-//     alert(i);
-// }
+    case 3:
+        alert("Three");
+        break;
 
-// LABELS FOR BREAK/CONTINUE
-outer: for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-    let input = prompt(`Value at coords (${i},${j})`, '');
-    // what if we want to exit from here to Done (below)?
-    if (!input) break outer;
-    }
-    }
-    alert('Done!');
-
-// FOR LOOP
-// let i = 0;
-
-// for (; i < 3; i++){
-//     alert(i);
-// }
-// alert("Out of the loop");
-
-// alert(i);
-
-//WHILE LOOP
-
-// let i = 0;
-
-// while(i<3){
-//     alert(i);
-//     i++; // If omitted the loop would run (in theory) forever outputting zero
-// }
-
-// let i = 3;
-
-// while(i){
-//     alert(i);
-//     i--; // If omitted the loop would run (in theory) forever outputting zero
-// }
-
-// THE DO...WHILE LOOP
-
-// let i = 0;
-
-// do{
-//     alert(i);
-//     i++;
-// }while(i<3);
-
-// Instead of this loop we normally just resort to using the while loop,
-// do...while loop is useful when we want the loop body to run atleast once regardless of whether it's truthy or not.
+    default:
+        alert("That is above 3");
+        break;
+}
