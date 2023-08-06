@@ -1,23 +1,25 @@
-// The Switch Statement
-// It is essential when we want to avoid using multiple if checks
-// Here is an example;
+// FUNCTIONS
+// Function declaration
+// We usually use the function keyword followed by the function name then the parentheses where the parameters are situated separated by commas if many.
 
-let arg = +prompt("Enter a number; ", '');
+// function showMessage(){
+    // alert("Hello Negro");
+// };
 
-switch(arg){
-    case 1:
-        alert("One");
-        break;
+// showMessage(); // This is how a function is called
 
-    case 2:
-        alert("Two");
-        break;
 
-    case 3:
-        alert("Three");
-        break;
+//We have Outer(Global) variables and Local variables
+// Global: outside a function, local: inside the function.
 
-    default:
-        alert("That is above 3");
-        break;
-}
+
+
+function showMessage(){
+    let negroName = 'DaQuan';
+    alert("Hello "+negroName);
+
+};
+let negroName = 'Tyrone';
+alert(negroName);
+showMessage();
+alert(negroName);
