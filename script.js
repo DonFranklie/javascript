@@ -1,25 +1,39 @@
 // FUNCTIONS
-// Function declaration
-// We usually use the function keyword followed by the function name then the parentheses where the parameters are situated separated by commas if many.
+// Default values
+// These are what are given when an argument is not passed into a function when it's being called.
 
-// function showMessage(){
-    // alert("Hello Negro");
-// };
+// let from = "Franklin";
+// function showMessage(from, text = "empty message"){ 
+//     from = "*"+from+"*";
+//     alert(from+": " +text);
+// }
 
-// showMessage(); // This is how a function is called
-
-
-//We have Outer(Global) variables and Local variables
-// Global: outside a function, local: inside the function.
+// showMessage(from); 
 
 
+let text = prompt("What is your text? ", '');
+function showMessage(text){
+    // text = text ;
+    alert(text|| "No text given");
+}
 
-function showMessage(){
-    let negroName = 'DaQuan';
-    alert("Hello "+negroName);
+showMessage(text);
 
-};
-let negroName = 'Tyrone';
-alert(negroName);
-showMessage();
-alert(negroName);
+
+
+
+
+// Function Parameters
+
+// let from = "Franklin";
+// function showMessage(from, text){ 
+//     //The ones inside the parentheses when the function is declared are called parameters
+//     from = "*"+from+"*";
+//     alert(from+": " +text);
+// }
+
+// showMessage(from, "Hello guys"); 
+// // The ones inside the parentheses when the function is called are called arguments
+
+// alert(from);
+
