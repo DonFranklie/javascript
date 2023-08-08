@@ -1,40 +1,22 @@
-let age = prompt("How old are you?"); // take 16 as an example
+//Arrow Funtions
 
-if (age < 18) {
-// welcome();
-function welcome() {
-alert("Hello!");
+let ask = (question, yes, no)=>{
+    if(confirm(question)) yes();
+    else no();
 }
 
-} else {
-welcome();
-function welcome() {
-alert("Greetings!");
-}
-}
-
-welcome();
-
-//callback Funtions
-
-// function ask(question, yes, no){
-//     if(confirm(question)) yes();
-//     else no();
-// }
-
-// ask("Do you agree?",
-//     function(){alert("You agreed!")},
-//     function(){alert("You disagree!")}
-// );
+ask("Do you agree?",
+    ()=>alert("You agreed!"),
+    ()=>alert("You disagree!")
+);
 
 
-// FUNCTION Expressions
 
-// let sayHi = function(){
-//     alert("Hello");
-// };
+let sayHi = () => {
+    alert("Hello");
+};
 
-// let func = sayHi;
+let func = sayHi;
 
-// alert(func);
+func();
 
